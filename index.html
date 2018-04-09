@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Quizzy thing</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>       
+        
+    </head>
+    <body>
+        <div class="navbar">    
+            <button type="button" id="SHOW">SHOW ALL</button>
+            <button type="button" id="HIDE">HIDE ALL</button>
+            Click below to toggle values.
+        </div>
+        
+      <table>
+      <tr>
+          <th class="title">ENGINE LIMITATIONS</th>
+      </tr>
+      <tr>
+        <td class="one">Maximum Operational</td>
+        <td class="two">8000 RPM for 2 minutes</td>
+      </tr>
+      <tr>
+        <td class="one">Maximum RPM, Climb</td>
+        <td class="two">7800 RPM</td>
+      </tr>
+      <tr>
+        <td class="one">Maximum Continuous Cruise RPM</td>
+        <td class="two">7500 RPM</td>
+      </tr>
+      <tr>
+        <td class="one">Maximum In Flight RPM</td>
+        <td class="two">3800 RPM</td>
+      </tr>
+      <tr>
+        <td class="one">Warm Up RPM</td>
+        <td class="two">4500 RPM</td>
+      </tr>
+      <tr>
+        <td class="one">Minimum Static Full Throttle</td>
+        <td class="two">6300 RPM</td>
+      </tr>
+        <tr>
+        <td class="one">Maximum Static Full Throttle</td>
+        <td class="two">7200 RPM</td>
+      </tr>
+      <tr>
+        <td class="one">Static Idle RPM (Payload and IFF ON)</td>
+        <td class="two">3720 RPM ± 120 RPM</td>
+      </tr>
+      <tr>
+        <td class="one">Duration at Max RPM on Ground</td>
+        <td class="two">10 seconds, operator command</td>
+      </tr>
+      <tr>
+        <td class="one">Rotor Air Temperature Operating Range in Flight</td>
+        <td class="two">64° - 175° C</td>
+      </tr>
+      <tr>
+        <td class="one">Cylinder Head Operating Range in Flight</td>
+        <td class="two">80° - 260° C</td>
+      </tr>
+        <tr>
+        <td class="one">Maximum Continuous RAT (Prior to launch/ In Flight)</td>
+        <td class="two">160° C / 170° C</td>
+      </tr>
+      <tr>
+        <td class="one">Maximum Continuous CHT</td>
+        <td class="two">250° C</td>
+      </tr>
+      <tr>
+        <td class="one">Maximum RAT range during initial climb</td>
+        <td class="two">170° - 175° C for 2 min if needed</td>
+      </tr>
+      <tr>
+        <td class="one">Maximum CHT range during initial climb</td>
+        <td class="two">250° - 260° C</td>
+      </tr>
+      
+      <tr>
+        <th>BUS VOLTAGE</th>
+      </tr>
+      <tr>
+        <td class="one">Bus Volt: (with engine operating)</td>
+        <td class="two">29 ± 1 V DC</td>
+      </tr>
+      <tr>
+        <td class="one">Allowable Fluctuation, on ground, engine running</td>
+        <td class="two">± 3 V DC initial ± 1 V DC prior to AV launch</td>
+      </tr>
+      <tr>
+        <td class="one">Battery Fail - Lithium Ion Battery</td>
+        <td class="two">< 19 V or < 20 minutes battery life remaining</td>
+      </tr>
+      
+      <tr>
+        <th>MANEUVERING LIMITS</th>
+      </tr>
+      <tr>
+        <td class="one">Roll Angle: Knobs or Points NAV</td>
+        <td class="two">20° AOB</td>
+      </tr>
+      <tr>
+        <td class="one">Commanded Roll Tolerance, Steady State</td>
+        <td class="two">± 6° AOB</td>
+      </tr>
+      <tr>
+        <td class="one">Roll Angle: TALS (Autoland)</td>
+        <td class="two">± 25°</td>
+      </tr>
+      <tr>
+        <td class="one">Pitch Angle</td>
+        <td class="two">20°, -15°, sustained pitch down > 10° during descent is prohibited</td>
+      </tr>
+      <tr>
+        <td class="one">Launcher Pitch Angle</td>
+        <td class="two">8° - 12° (U)(P)GCS reported</td>
+      </tr>
+      
+       <tr>
+        <th>AIRSPEED LIMITATIONS</th>
+      </tr>
+      <tr>
+        <td class="one">TALS Automatic Abort</td>
+        <td class="two">Airspeed > 78 KIAS or < 52 KIAS for 2 seconds</td>
+      </tr>
+      <tr>
+        <td class="one">Normal Flight</td>
+        <td class="two">65 - 100 KIAS</td>
+      </tr>
+      <tr>
+        <td class="one">Alert Displayed (display turn yellow)</td>
+        <td class="two">55 KIAS</td>
+      </tr>
+      <tr>
+        <td class="one">Maneuvering Speed</td>
+        <td class="two">70 KIAS</td>
+      </tr>
+      <tr>
+        <td class="one">Maximum Reported Airspeed (Descent)</td>
+        <td class="two">90 KIAS</td>
+      </tr>
+      <tr>
+        <td class="one">Maximum Commanded Airspeed (Level Flight)</td>
+        <td class="two">Refer to AV Maximum Commanded Airspeed Chart</td>
+      </tr>
+      
+      <tr>
+        <th>CLIMB AND DESCENT LAWS</th>
+      </tr>
+      <tr>
+        <td class="one">Climb Law</td>
+        <td class="two">62 KIAS</td>
+      </tr>
+      <tr>
+        <td class="one">Descent Law</td>
+        <td class="two">70 - 90 KIAS</td>
+      </tr>
+      
+      <tr>
+        <th>FUEL</th>
+      </tr>
+      <tr>
+        <td class="one">Capacity</td>
+        <td class="two">58 L</td>
+      </tr>
+      <tr>
+        <td class="one">Fuel on Ground Limit</td>
+        <td class="two">10 L</td>
+      </tr>
+      
+      <tr>
+        <th>ALTITUDE ENVELOPE</th>
+      </tr>
+      <tr>
+        <td class="one">Min Safe FTS Deploy</td>
+        <td class="two">500 ft AGL</td>
+      </tr>
+      <tr>
+        <td class="one">Min Altitude</td>
+        <td class="two">ELOS</td>
+      </tr>
+      <tr>
+        <td class="one">Service Ceiling</td>
+        <td class="two">16,000 ft MSL</td>
+      </tr>
+      <tr>
+        <td class="one">Maximum Gross Weight (takeoff) / Altitude</td>
+        <td class="two">467 lbs ≤ 10,500' DA</td>
+      </tr>
+      
+      <tr>
+        <th>WIND LIMITATIONS (TAKEOFF & LANDINGS)</th>
+      </tr>
+      <tr>
+        <td class="one">Headwind / Crosswind Component (Maximum)</td>
+        <td class="two">20 kts steady or gusting to 25 kts</td>
+      </tr>
+      <tr>
+        <td class="one">Takeoff Tailwind Component (Maximum)</td>
+        <td class="two">Refer to LAU Nitrogen Pre-charge Pressure Charts in Section 7-11</td>
+      </tr>
+      <tr>
+        <td class="one">Landing Tailwind Component (Maximum)</td>
+        <td class="two">5 kts at surface, prior to DP</td>
+      </tr>
+      <tr>
+        <td class="one">Landing Tailwind Component > 8000 ft DA</td>
+        <td class="two">0 kts</td>
+      </tr>
+      
+      <tr>
+        <th>ENDURANCE</th>
+      </tr>
+      <tr>
+          <td class="one">Max Flight Time</td>
+          <td class="two">9.0 hrs</td>
+      </tr>
+    </table>
+
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            margin-top: 25px;
+        }
+
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+            color: white;
+            background: black;
+            width: 400px;
+        }
+
+        td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+            width: 400px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+            width: 400px;
+        }
+
+        .one {
+            width:400px;
+        }
+
+        .two {
+            display: none;
+            width:600px;
+        }
+   
+        .navbar {
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            background-color: black;
+            color: white;
+        }
+    </style>     
+        
+    <script>
+    $(document).ready(function() { 
+        $('td.one').on('click', function() { 
+           $(this).next('.two').fadeToggle(); 
+        });
+    });
+    
+    $('#SHOW').click(function() {
+        $('.two').css({
+            'display': 'block'
+    });
+    $('#HIDE').click(function() {
+        $('.two').css({
+            'display': 'none'
+        });
+    });
+});
+</script>
+    </body>
+</html>
